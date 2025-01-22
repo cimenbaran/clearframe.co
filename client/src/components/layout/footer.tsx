@@ -2,7 +2,7 @@ import { Link } from "wouter";
 
 export function Footer() {
   return (
-    <footer className="border-t">
+    <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-6 py-8 md:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">

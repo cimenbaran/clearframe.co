@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lightbox } from "@/components/ui/lightbox";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const projects = [
   {
@@ -49,22 +50,22 @@ export function Gallery() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="cursor-pointer group"
-              onClick={() => setSelectedImage(project.image)}
             >
-              <div className="overflow-hidden rounded-lg">
-                <AspectRatio ratio={4/3}>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-                  />
-                </AspectRatio>
-              </div>
-              <div className="mt-4">
-                <h3 className="font-medium">{project.title}</h3>
-                <p className="text-sm text-muted-foreground">{project.category}</p>
-              </div>
+              <Card className="cursor-pointer group" onClick={() => setSelectedImage(project.image)}>
+                <CardContent className="p-0 overflow-hidden rounded-t-lg">
+                  <AspectRatio ratio={4/3}>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </AspectRatio>
+                </CardContent>
+                <CardHeader>
+                  <h3 className="font-medium">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground">{project.category}</p>
+                </CardHeader>
+              </Card>
             </motion.div>
           ))}
         </div>
