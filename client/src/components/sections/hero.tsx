@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 
 export function Hero() {
   return (
@@ -19,7 +20,9 @@ export function Hero() {
             Perfect for real estate showcases and architectural presentations.
           </p>
           <div className="flex gap-4">
-            <Button size="lg">View Portfolio</Button>
+            <Link href="/portfolio">
+              <Button size="lg">View Portfolio</Button>
+            </Link>
             <Button size="lg" variant="outline">
               Learn More
             </Button>

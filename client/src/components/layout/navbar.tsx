@@ -22,7 +22,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 max-w-7xl flex h-16 items-center">
         <Link href="/">
           <a className="mr-8 flex items-center space-x-2">
-            <span className="font-bold text-xl">VirtualSpace</span>
+            <span className="font-bold text-xl">ClearFrame</span>
           </a>
         </Link>
         <nav className="flex flex-1 items-center space-x-6">

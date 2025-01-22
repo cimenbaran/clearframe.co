@@ -8,7 +8,7 @@ export default function About() {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-3xl mx-auto"
       >
-        <h1 className="text-4xl font-bold mb-6 text-center">About VirtualSpace</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center">About ClearFrame</h1>
         <p className="text-xl text-muted-foreground mb-8 text-center">
           We are pioneers in creating immersive virtual experiences for the architecture
           and real estate industry.
