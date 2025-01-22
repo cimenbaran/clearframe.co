@@ -8,25 +8,25 @@ import { useLanguage } from "@/lib/i18n/languageContext";
 const projects = [
   {
     id: 1,
-    title: "Modern Office Complex",
+    titleKey: "modernOffice",
     image: "https://images.unsplash.com/photo-1534527489986-3e3394ca569c",
     category: "commercial",
   },
   {
     id: 2,
-    title: "Luxury Penthouse",
+    titleKey: "luxuryResidence",
     image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
     category: "residential",
   },
   {
     id: 3,
-    title: "Glass Tower",
+    titleKey: "modernOffice",
     image: "https://images.unsplash.com/photo-1518436127045-3367819540bf",
     category: "commercial",
   },
   {
     id: 4,
-    title: "Modern Villa",
+    titleKey: "luxuryResidence",
     image: "https://images.unsplash.com/photo-1507149833265-60c372daea22",
     category: "residential",
   },
@@ -67,18 +67,15 @@ export function Gallery() {
                   <AspectRatio ratio={4/3}>
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={t("gallery", "projects", `${project.titleKey}.title`)}
                       className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
                     />
                   </AspectRatio>
                 </CardContent>
                 <CardHeader>
-                  <h3 className="font-medium">{project.title}</h3>
+                  <h3 className="font-medium">{t("gallery", "projects", `${project.titleKey}.title`)}</h3>
                   <p className="text-sm text-muted-foreground">
-                    {project.category === 'commercial' 
-                      ? t("gallery", "category.commercial")
-                      : t("gallery", "category.residential")
-                    }
+                    {t("gallery", "category", project.category)}
                   </p>
                 </CardHeader>
               </Card>

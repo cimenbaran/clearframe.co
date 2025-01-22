@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 import { translations, Language } from "./translations";
 
 type LanguageContextType = {
@@ -17,17 +17,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       const sectionData = translations[language][section];
       if (!sectionData) return key;
 
-      if (nested) {
-        const keys = nested.split('.');
-        let value = sectionData[key as keyof typeof sectionData];
-        for (const nestedKey of keys) {
-          if (!value || typeof value !== 'object') return key;
-          value = value[nestedKey as keyof typeof value];
-        }
-        return value as string || key;
+      if (!nested) {
+        return (sectionData[key as keyof typeof sectionData] as string) || key;
       }
 
-      return sectionData[key as keyof typeof sectionData] as string || key;
+      const pathParts = nested.split('.');
+      let value: any = sectionData[key as keyof typeof sectionData];
+
+      for (const part of pathParts) {
+        if (!value || typeof value !== 'object') return key;
+        value = value[part];
+      }
+
+      return typeof value === 'string' ? value : key;
     } catch (error) {
       console.error(`Translation error for ${section}.${key}${nested ? '.' + nested : ''}`);
       return key;
