@@ -31,18 +31,18 @@ export default function About() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="text-center">
                 <h3 className="font-medium mb-2">
-                  {t("about", "expertise.virtualTour", "title")}
+                  {t("about", "expertise", "virtualTour.title")}
                 </h3>
                 <p className="text-muted-foreground">
-                  {t("about", "expertise.virtualTour", "text")}
+                  {t("about", "expertise", "virtualTour.text")}
                 </p>
               </div>
               <div className="text-center">
                 <h3 className="font-medium mb-2">
-                  {t("about", "expertise.visualization", "title")}
+                  {t("about", "expertise", "visualization.title")}
                 </h3>
                 <p className="text-muted-foreground">
-                  {t("about", "expertise.visualization", "text")}
+                  {t("about", "expertise", "visualization.text")}
                 </p>
               </div>
             </div>
@@ -56,26 +56,26 @@ export default function About() {
               <ul className="space-y-4">
                 <li className="text-center">
                   <span className="font-medium block mb-2">
-                    {t("about", "values.innovation", "title")}
+                    {t("about", "values", "innovation.title")}
                   </span>
                   <span className="text-muted-foreground">
-                    {t("about", "values.innovation", "text")}
+                    {t("about", "values", "innovation.text")}
                   </span>
                 </li>
                 <li className="text-center">
                   <span className="font-medium block mb-2">
-                    {t("about", "values.quality", "title")}
+                    {t("about", "values", "quality.title")}
                   </span>
                   <span className="text-muted-foreground">
-                    {t("about", "values.quality", "text")}
+                    {t("about", "values", "quality.text")}
                   </span>
                 </li>
                 <li className="text-center">
                   <span className="font-medium block mb-2">
-                    {t("about", "values.collaboration", "title")}
+                    {t("about", "values", "collaboration.title")}
                   </span>
                   <span className="text-muted-foreground">
-                    {t("about", "values.collaboration", "text")}
+                    {t("about", "values", "collaboration.text")}
                   </span>
                 </li>
               </ul>
