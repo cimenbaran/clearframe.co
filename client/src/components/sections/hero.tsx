@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export function Hero() {
   return (
     <div className="relative min-h-[80vh] flex items-center">
-      <div className="container">
+      <div className="container mx-auto px-6 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -19,7 +19,7 @@ export function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="container flex h-16 items-center">
+      <div className="container mx-auto px-6 max-w-7xl flex h-16 items-center">
         <Link href="/">
           <a className="mr-8 flex items-center space-x-2">
             <span className="font-bold text-xl">VirtualSpace</span>
