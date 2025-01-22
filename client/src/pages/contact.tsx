@@ -109,11 +109,11 @@ export default function Contact() {
 
         <div className="mt-12 grid md:grid-cols-2 gap-8 text-center">
           <div>
-            <h3 className="font-medium mb-2">{t("contact", "form", "email")}</h3>
+            <h3 className="font-medium mb-2">Email</h3>
             <p className="text-muted-foreground">info@clearframe.com</p>
           </div>
           <div>
-            <h3 className="font-medium mb-2">{t("contact", "form", "phone")}</h3>
+            <h3 className="font-medium mb-2">Phone</h3>
             <p className="text-muted-foreground">+1 (555) 123-4567</p>
           </div>
         </div>

@@ -25,16 +25,22 @@ export default function About() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-center">{t("about", "expertise", "title")}</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-center">
+              {t("about", "expertise", "title")}
+            </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="text-center">
-                <h3 className="font-medium mb-2">{t("about", "expertise", "virtualTour", "title")}</h3>
+                <h3 className="font-medium mb-2">
+                  {t("about", "expertise", "virtualTour", "title")}
+                </h3>
                 <p className="text-muted-foreground">
                   {t("about", "expertise", "virtualTour", "text")}
                 </p>
               </div>
               <div className="text-center">
-                <h3 className="font-medium mb-2">{t("about", "expertise", "visualization", "title")}</h3>
+                <h3 className="font-medium mb-2">
+                  {t("about", "expertise", "visualization", "title")}
+                </h3>
                 <p className="text-muted-foreground">
                   {t("about", "expertise", "visualization", "text")}
                 </p>
@@ -43,23 +49,31 @@ export default function About() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-center">{t("about", "values", "title")}</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-center">
+              {t("about", "values", "title")}
+            </h2>
             <div className="max-w-2xl mx-auto">
               <ul className="space-y-4">
                 <li className="text-center">
-                  <span className="font-medium block mb-2">{t("about", "values", "innovation", "title")}</span>
+                  <span className="font-medium block mb-2">
+                    {t("about", "values", "innovation", "title")}
+                  </span>
                   <span className="text-muted-foreground">
                     {t("about", "values", "innovation", "text")}
                   </span>
                 </li>
                 <li className="text-center">
-                  <span className="font-medium block mb-2">{t("about", "values", "quality", "title")}</span>
+                  <span className="font-medium block mb-2">
+                    {t("about", "values", "quality", "title")}
+                  </span>
                   <span className="text-muted-foreground">
                     {t("about", "values", "quality", "text")}
                   </span>
                 </li>
                 <li className="text-center">
-                  <span className="font-medium block mb-2">{t("about", "values", "collaboration", "title")}</span>
+                  <span className="font-medium block mb-2">
+                    {t("about", "values", "collaboration", "title")}
+                  </span>
                   <span className="text-muted-foreground">
                     {t("about", "values", "collaboration", "text")}
                   </span>
