@@ -2,6 +2,7 @@ import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Logo } from "@/components/ui/logo";
 
 export function Navbar() {
   const [location] = useLocation();
@@ -10,7 +11,6 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -22,6 +22,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 max-w-7xl flex h-16 items-center">
         <Link href="/">
           <a className="mr-8 flex items-center space-x-2">
+            <Logo />
             <span className="font-bold text-xl">ClearFrame</span>
           </a>
         </Link>
@@ -40,8 +41,20 @@ export function Navbar() {
               </a>
             </Link>
           ))}
-          <div className="ml-auto">
+          <div className="ml-auto flex items-center space-x-4">
+            <Link href="/contact">
+              <a className="text-sm font-medium text-muted-foreground hover:text-primary">
+                Contact
+              </a>
+            </Link>
             <Button>Get Started</Button>
+            <select 
+              className="bg-transparent border rounded px-2 py-1 text-sm"
+              defaultValue="en"
+            >
+              <option value="en">EN</option>
+              <option value="tr">TR</option>
+            </select>
           </div>
         </nav>
       </div>

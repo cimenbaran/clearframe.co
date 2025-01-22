@@ -30,18 +30,12 @@ export function Services() {
     <section className="py-16">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-12">
-          <h2 
-            className="text-3xl font-bold mb-4"
-            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
-          >
-            Our Services
-          </h2>
-          <p 
-            className="text-muted-foreground max-w-2xl mx-auto"
-            style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}
-          >
-            We offer comprehensive virtual tour solutions for real estate and architecture professionals.
-          </p>
+          <div className="inline-block bg-white/90 backdrop-blur-sm p-4 rounded-lg">
+            <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              We offer comprehensive virtual tour solutions for real estate and architecture professionals.
+            </p>
+          </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
