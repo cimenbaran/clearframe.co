@@ -46,21 +46,22 @@ export function ComparisonSlider({
 
       {/* Before Image (Sliding layer) */}
       <motion.div
-        className="absolute inset-0 overflow-hidden"
+        className="absolute top-0 left-0 bottom-0 overflow-hidden"
         style={{ width: x }}
         drag="x"
         dragElastic={0}
         dragMomentum={false}
         dragConstraints={{ left: 0, right: sliderWidth }}
       >
-        <img
-          src={beforeImage}
-          alt="Before"
-          className="absolute h-full object-cover"
-          style={{ width: sliderWidth }}
-        />
-        <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-          {beforeLabel}
+        <div className="relative h-full" style={{ width: sliderWidth }}>
+          <img
+            src={beforeImage}
+            alt="Before"
+            className="absolute top-0 left-0 h-full w-full object-cover"
+          />
+          <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+            {beforeLabel}
+          </div>
         </div>
       </motion.div>
 
