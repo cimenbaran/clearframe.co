@@ -54,7 +54,7 @@ export function Team() {
                   />
                   <h3 className="text-xl font-medium mb-1">{member.name}</h3>
                   <p className="text-muted-foreground">
-                    {t("team", `roles.${member.roleKey}`)}
+                    {t("team", "roles", member.roleKey)}
                   </p>
                 </CardContent>
               </Card>
