@@ -31,9 +31,9 @@ export function ComparisonSlider({
   }, [handleResize]);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden rounded-lg comparison-slider">
+    <div className="relative w-full h-[400px] overflow-hidden rounded-lg comparison-slider select-none">
       {/* After Image (Base layer) */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <img
           src={afterImage}
           alt="After"
@@ -46,7 +46,7 @@ export function ComparisonSlider({
 
       {/* Before Image (Sliding layer) */}
       <motion.div
-        className="absolute top-0 left-0 bottom-0 overflow-hidden"
+        className="absolute top-0 left-0 bottom-0 overflow-hidden pointer-events-none"
         style={{ width: x }}
         drag="x"
         dragElastic={0}
@@ -67,7 +67,7 @@ export function ComparisonSlider({
 
       {/* Slider Handle */}
       <motion.div
-        className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize"
+        className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize pointer-events-auto"
         style={{ x }}
         drag="x"
         dragElastic={0}
