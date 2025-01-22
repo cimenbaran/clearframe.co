@@ -74,7 +74,12 @@ export function Gallery() {
                 </CardContent>
                 <CardHeader>
                   <h3 className="font-medium">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground">{t("gallery", `category.${project.category}`)}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {project.category === 'commercial' 
+                      ? t("gallery", "category.commercial")
+                      : t("gallery", "category.residential")
+                    }
+                  </p>
                 </CardHeader>
               </Card>
             </motion.div>

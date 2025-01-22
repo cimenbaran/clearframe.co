@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Lightbox } from "@/components/ui/lightbox";
 import { ComparisonSlider } from "@/components/ui/comparison-slider";
+import { useLanguage } from "@/lib/i18n/languageContext";
 
 const portfolio = [
   {
@@ -26,21 +27,22 @@ const comparisons = [
     title: "Living Room Transformation",
     beforeImage: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d",
     afterImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-    beforeLabel: "Empty Space",
-    afterLabel: "Furnished",
+    beforeLabel: "emptySpace",
+    afterLabel: "furnished",
   },
   {
     id: 2,
     title: "Kitchen Renovation",
     beforeImage: "https://images.unsplash.com/photo-1556911220-bff31c812dba",
     afterImage: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d",
-    beforeLabel: "Before Renovation",
-    afterLabel: "After Renovation",
+    beforeLabel: "beforeRenovation",
+    afterLabel: "afterRenovation",
   },
 ];
 
 export default function Portfolio() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   return (
     <div className="container mx-auto px-6 max-w-7xl py-16">
@@ -49,9 +51,9 @@ export default function Portfolio() {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-2xl mx-auto text-center mb-12"
       >
-        <h1 className="text-4xl font-bold mb-4">Our Portfolio</h1>
+        <h1 className="text-4xl font-bold mb-4">{t("portfolio", "title")}</h1>
         <p className="text-muted-foreground">
-          Explore our collection of virtual tours and architectural visualizations.
+          {t("portfolio", "subtitle")}
         </p>
       </motion.div>
 
@@ -87,7 +89,7 @@ export default function Portfolio() {
         className="mt-24"
       >
         <h2 className="text-3xl font-bold text-center mb-12">
-          Before & After Comparisons
+          {t("portfolio", "beforeAfter")}
         </h2>
         <div className="space-y-16">
           {comparisons.map((comparison, index) => (
@@ -104,8 +106,8 @@ export default function Portfolio() {
               <ComparisonSlider
                 beforeImage={comparison.beforeImage}
                 afterImage={comparison.afterImage}
-                beforeLabel={comparison.beforeLabel}
-                afterLabel={comparison.afterLabel}
+                beforeLabel={t("portfolio", `labels.${comparison.beforeLabel}`)}
+                afterLabel={t("portfolio", `labels.${comparison.afterLabel}`)}
               />
             </motion.div>
           ))}

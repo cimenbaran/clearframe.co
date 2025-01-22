@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/lib/i18n/languageContext";
 
 interface ContactFormData {
   name: string;
@@ -14,6 +15,7 @@ interface ContactFormData {
 
 export default function Contact() {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const { register, handleSubmit, formState: { errors } } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
@@ -27,13 +29,13 @@ export default function Contact() {
       if (!response.ok) throw new Error("Failed to send message");
 
       toast({
-        title: "Message sent",
-        description: "We'll get back to you as soon as possible.",
+        title: t("contact", "form.success"),
+        description: t("contact", "form.successDesc"),
       });
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
+        title: t("contact", "form.error"),
+        description: t("contact", "form.errorDesc"),
         variant: "destructive",
       });
     }
@@ -46,16 +48,16 @@ export default function Contact() {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-2xl mx-auto"
       >
-        <h1 className="text-4xl font-bold mb-6 text-center">Contact Us</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center">{t("contact", "title")}</h1>
         <p className="text-muted-foreground mb-8 text-center">
-          Get in touch with us to discuss your virtual tour needs.
+          {t("contact", "subtitle")}
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div>
             <Input
-              placeholder="Name"
-              {...register("name", { required: "Name is required" })}
+              placeholder={t("contact", "form.name")}
+              {...register("name", { required: t("contact", "validation.required") })}
             />
             {errors.name && (
               <span className="text-sm text-destructive">{errors.name.message}</span>
@@ -65,12 +67,12 @@ export default function Contact() {
           <div>
             <Input
               type="email"
-              placeholder="Email"
+              placeholder={t("contact", "form.email")}
               {...register("email", {
-                required: "Email is required",
+                required: t("contact", "validation.required"),
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: "Invalid email address",
+                  message: t("contact", "validation.email"),
                 },
               })}
             />
@@ -81,8 +83,8 @@ export default function Contact() {
 
           <div>
             <Input
-              placeholder="Subject"
-              {...register("subject", { required: "Subject is required" })}
+              placeholder={t("contact", "form.subject")}
+              {...register("subject", { required: t("contact", "validation.required") })}
             />
             {errors.subject && (
               <span className="text-sm text-destructive">{errors.subject.message}</span>
@@ -91,9 +93,9 @@ export default function Contact() {
 
           <div>
             <Textarea
-              placeholder="Message"
+              placeholder={t("contact", "form.message")}
               className="min-h-[150px]"
-              {...register("message", { required: "Message is required" })}
+              {...register("message", { required: t("contact", "validation.required") })}
             />
             {errors.message && (
               <span className="text-sm text-destructive">{errors.message.message}</span>
@@ -101,17 +103,17 @@ export default function Contact() {
           </div>
 
           <Button type="submit" className="w-full">
-            Send Message
+            {t("contact", "form.submit")}
           </Button>
         </form>
 
         <div className="mt-12 grid md:grid-cols-2 gap-8 text-center">
           <div>
-            <h3 className="font-medium mb-2">Email</h3>
-            <p className="text-muted-foreground">info@virtualspace.com</p>
+            <h3 className="font-medium mb-2">{t("contact", "form.email")}</h3>
+            <p className="text-muted-foreground">info@clearframe.com</p>
           </div>
           <div>
-            <h3 className="font-medium mb-2">Phone</h3>
+            <h3 className="font-medium mb-2">{t("phone", "title")}</h3>
             <p className="text-muted-foreground">+1 (555) 123-4567</p>
           </div>
         </div>
