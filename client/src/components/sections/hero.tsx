@@ -23,9 +23,11 @@ export function Hero() {
             <Link href="/portfolio">
               <Button size="lg">View Portfolio</Button>
             </Link>
-            <Button size="lg" variant="outline">
-              Learn More
-            </Button>
+            <Link href="/about">
+              <Button size="lg" variant="outline">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>
