@@ -29,13 +29,13 @@ export default function Contact() {
       if (!response.ok) throw new Error("Failed to send message");
 
       toast({
-        title: t("contact", "form.success"),
-        description: t("contact", "form.successDesc"),
+        title: t("contact", "form", "success"),
+        description: t("contact", "form", "successDesc"),
       });
     } catch (error) {
       toast({
-        title: t("contact", "form.error"),
-        description: t("contact", "form.errorDesc"),
+        title: t("contact", "form", "error"),
+        description: t("contact", "form", "errorDesc"),
         variant: "destructive",
       });
     }
@@ -56,8 +56,8 @@ export default function Contact() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div>
             <Input
-              placeholder={t("contact", "form.name")}
-              {...register("name", { required: t("contact", "validation.required") })}
+              placeholder={t("contact", "form", "name")}
+              {...register("name", { required: t("contact", "validation", "required") })}
             />
             {errors.name && (
               <span className="text-sm text-destructive">{errors.name.message}</span>
@@ -67,12 +67,12 @@ export default function Contact() {
           <div>
             <Input
               type="email"
-              placeholder={t("contact", "form.email")}
+              placeholder={t("contact", "form", "email")}
               {...register("email", {
-                required: t("contact", "validation.required"),
+                required: t("contact", "validation", "required"),
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: t("contact", "validation.email"),
+                  message: t("contact", "validation", "email"),
                 },
               })}
             />
@@ -83,8 +83,8 @@ export default function Contact() {
 
           <div>
             <Input
-              placeholder={t("contact", "form.subject")}
-              {...register("subject", { required: t("contact", "validation.required") })}
+              placeholder={t("contact", "form", "subject")}
+              {...register("subject", { required: t("contact", "validation", "required") })}
             />
             {errors.subject && (
               <span className="text-sm text-destructive">{errors.subject.message}</span>
@@ -93,9 +93,9 @@ export default function Contact() {
 
           <div>
             <Textarea
-              placeholder={t("contact", "form.message")}
+              placeholder={t("contact", "form", "message")}
               className="min-h-[150px]"
-              {...register("message", { required: t("contact", "validation.required") })}
+              {...register("message", { required: t("contact", "validation", "required") })}
             />
             {errors.message && (
               <span className="text-sm text-destructive">{errors.message.message}</span>
@@ -103,17 +103,17 @@ export default function Contact() {
           </div>
 
           <Button type="submit" className="w-full">
-            {t("contact", "form.submit")}
+            {t("contact", "form", "submit")}
           </Button>
         </form>
 
         <div className="mt-12 grid md:grid-cols-2 gap-8 text-center">
           <div>
-            <h3 className="font-medium mb-2">{t("contact", "form.email")}</h3>
+            <h3 className="font-medium mb-2">{t("contact", "form", "email")}</h3>
             <p className="text-muted-foreground">info@clearframe.com</p>
           </div>
           <div>
-            <h3 className="font-medium mb-2">{t("phone", "title")}</h3>
+            <h3 className="font-medium mb-2">{t("contact", "form", "phone")}</h3>
             <p className="text-muted-foreground">+1 (555) 123-4567</p>
           </div>
         </div>
