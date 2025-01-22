@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const team = [
   {
@@ -15,24 +16,32 @@ const team = [
 ];
 
 export function Team() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <section className="py-16">
+    <section className="py-16" ref={ref}>
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="text-center mb-12">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="inline-block bg-white/90 backdrop-blur-sm p-4 rounded-lg">
             <h2 className="text-3xl font-bold mb-4">Our Team</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Meet the experts behind our virtual tour solutions.
             </p>
           </div>
-        </div>
+        </motion.div>
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {team.map((member, index) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <Card>
                 <CardContent className="p-6">

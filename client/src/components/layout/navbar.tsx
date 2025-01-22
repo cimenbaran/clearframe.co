@@ -29,21 +29,23 @@ export function Navbar() {
             <span className="font-bold text-xl">ClearFrame</span>
           </a>
         </Link>
-        <nav className="flex flex-1 items-center space-x-6">
-          {links.map(({ href, label }) => (
-            <Link key={href} href={href}>
-              <a
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  location === href
-                    ? "text-foreground"
-                    : "text-muted-foreground"
-                )}
-              >
-                {label}
-              </a>
-            </Link>
-          ))}
+        <nav className="flex flex-1 items-center">
+          <div className="flex space-x-6">
+            {links.map(({ href, label }) => (
+              <Link key={href} href={href}>
+                <a
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary",
+                    location === href
+                      ? "text-foreground"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {label}
+                </a>
+              </Link>
+            ))}
+          </div>
           <div className="ml-auto flex items-center space-x-4">
             <Link href="/contact">
               <a className="text-sm font-medium text-muted-foreground hover:text-primary">
