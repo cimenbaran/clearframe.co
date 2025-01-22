@@ -15,7 +15,7 @@ export function Hero() {
       />
 
       {/* Dark overlay for better text readability */}
-      <div className="fixed inset-0 w-full h-full bg-black/80 -z-10" />
+      <div className="fixed inset-0 w-full h-full bg-black/40 -z-10" />
 
       {/* Content overlay */}
       <div className="relative min-h-[80vh] flex items-center">
