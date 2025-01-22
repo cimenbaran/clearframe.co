@@ -9,23 +9,30 @@ export const translations = {
     },
     hero: {
       title: "Experience Spaces Like Never Before",
-      subtitle: "We create immersive virtual tours that bring architectural spaces to life. Perfect for real estate showcases and architectural presentations.",
+      subtitle:
+        "We create immersive virtual tours that bring architectural spaces to life. Perfect for real estate showcases and architectural presentations.",
     },
     services: {
       title: "Our Services",
-      subtitle: "We offer comprehensive virtual tour solutions for real estate and architecture professionals.",
+      subtitle:
+        "We offer comprehensive virtual tour solutions for real estate and architecture professionals.",
       virtualTours: "Virtual Tours",
-      virtualToursDesc: "Immersive 360° virtual tours with interactive hotspots and guided navigation.",
+      virtualToursDesc:
+        "Immersive 360° virtual tours with interactive hotspots and guided navigation.",
       modeling: "3D Modeling",
-      modelingDesc: "Detailed 3D models of buildings and spaces with photorealistic rendering.",
+      modelingDesc:
+        "Detailed 3D models of buildings and spaces with photorealistic rendering.",
       realEstate: "Real Estate Showcase",
-      realEstateDesc: "Engaging virtual property tours for real estate marketing and sales.",
+      realEstateDesc:
+        "Engaging virtual property tours for real estate marketing and sales.",
       architecture: "Architecture Visualization",
-      architectureDesc: "Professional visualization services for architectural projects and presentations.",
+      architectureDesc:
+        "Professional visualization services for architectural projects and presentations.",
     },
     gallery: {
       title: "Featured Projects",
-      subtitle: "Explore our portfolio of virtual tours and architectural visualizations.",
+      subtitle:
+        "Explore our portfolio of virtual tours and architectural visualizations.",
       category: {
         commercial: "Commercial",
         residential: "Residential",
@@ -33,7 +40,8 @@ export const translations = {
       projects: {
         modernOffice: {
           title: "Modern Office Complex",
-          description: "A virtual tour of a contemporary office building in downtown.",
+          description:
+            "A virtual tour of a contemporary office building in downtown.",
         },
         luxuryResidence: {
           title: "Luxury Residence",
@@ -45,6 +53,8 @@ export const translations = {
       title: "Our Team",
       subtitle: "Meet the experts behind our virtual tour solutions.",
       roles: {
+        cofounderbaran: "Co-Founder & CTO",
+        cofounderemir: "Co-Founder & COO",
         architect: "Lead Architect",
         visualization: "3D Visualization Expert",
       },
@@ -63,7 +73,8 @@ export const translations = {
     },
     portfolio: {
       title: "Our Portfolio",
-      subtitle: "Explore our collection of virtual tours and architectural visualizations.",
+      subtitle:
+        "Explore our collection of virtual tours and architectural visualizations.",
       beforeAfter: "Before & After Comparisons",
       transformations: {
         livingRoom: {
@@ -84,7 +95,8 @@ export const translations = {
     },
     about: {
       title: "About ClearFrame",
-      subtitle: "We are pioneers in creating immersive virtual experiences for the architecture and real estate industry.",
+      subtitle:
+        "We are pioneers in creating immersive virtual experiences for the architecture and real estate industry.",
       mission: {
         title: "Our Mission",
         text: "To revolutionize how people experience and interact with architectural spaces through cutting-edge virtual tour technology.",
@@ -146,19 +158,25 @@ export const translations = {
     },
     hero: {
       title: "Mekanları Farklı Deneyimleyin",
-      subtitle: "Mimari alanları canlandıran sürükleyici sanal turlar oluşturuyoruz. Emlak gösterimleri ve mimari sunumlar için mükemmel.",
+      subtitle:
+        "Mimari alanları canlandıran sürükleyici sanal turlar oluşturuyoruz. Emlak gösterimleri ve mimari sunumlar için mükemmel.",
     },
     services: {
       title: "Hizmetlerimiz",
-      subtitle: "Emlak ve mimarlık profesyonelleri için kapsamlı sanal tur çözümleri sunuyoruz.",
+      subtitle:
+        "Emlak ve mimarlık profesyonelleri için kapsamlı sanal tur çözümleri sunuyoruz.",
       virtualTours: "Sanal Turlar",
-      virtualToursDesc: "Etkileşimli erişim noktaları ve rehberli navigasyon ile sürükleyici 360° sanal turlar.",
+      virtualToursDesc:
+        "Etkileşimli erişim noktaları ve rehberli navigasyon ile sürükleyici 360° sanal turlar.",
       modeling: "3B Modelleme",
-      modelingDesc: "Fotorealistik görselleştirme ile detaylı bina ve mekan 3B modelleri.",
+      modelingDesc:
+        "Fotorealistik görselleştirme ile detaylı bina ve mekan 3B modelleri.",
       realEstate: "Emlak Gösterimi",
-      realEstateDesc: "Emlak pazarlama ve satışları için etkileyici sanal mülk turları.",
+      realEstateDesc:
+        "Emlak pazarlama ve satışları için etkileyici sanal mülk turları.",
       architecture: "Mimari Görselleştirme",
-      architectureDesc: "Mimari projeler ve sunumlar için profesyonel görselleştirme hizmetleri.",
+      architectureDesc:
+        "Mimari projeler ve sunumlar için profesyonel görselleştirme hizmetleri.",
     },
     gallery: {
       title: "Öne Çıkan Projeler",
@@ -182,6 +200,8 @@ export const translations = {
       title: "Ekibimiz",
       subtitle: "Sanal tur çözümlerimizin arkasındaki uzmanlarla tanışın.",
       roles: {
+        cofounderbaran: "Kurucu Ortak & CTO",
+        cofounderemir: "Kurucu Ortak & COO",
         architect: "Baş Mimar",
         visualization: "3B Görselleştirme Uzmanı",
       },
@@ -221,7 +241,8 @@ export const translations = {
     },
     about: {
       title: "ClearFrame Hakkında",
-      subtitle: "Mimarlık ve gayrimenkul sektörü için sürükleyici sanal deneyimler oluşturmada öncüyüz.",
+      subtitle:
+        "Mimarlık ve gayrimenkul sektörü için sürükleyici sanal deneyimler oluşturmada öncüyüz.",
       mission: {
         title: "Misyonumuz",
         text: "En son sanal tur teknolojisi ile insanların mimari mekanları deneyimleme ve etkileşim kurma şeklini devrimleştirmek.",
@@ -255,7 +276,8 @@ export const translations = {
     },
     contact: {
       title: "İletişim",
-      subtitle: "Sanal tur ihtiyaçlarınızı görüşmek için bizimle iletişime geçin.",
+      subtitle:
+        "Sanal tur ihtiyaçlarınızı görüşmek için bizimle iletişime geçin.",
       form: {
         name: "İsim",
         email: "E-posta",
