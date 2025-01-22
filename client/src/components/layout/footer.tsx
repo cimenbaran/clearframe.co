@@ -51,13 +51,13 @@ export function Footer() {
             <h4 className="font-medium mb-4">{t("footer", "services")}</h4>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">
-                {t("footer.services_list.virtualTours")}
+                {t("footer", "services_list", "virtualTours")}
               </li>
               <li className="text-sm text-muted-foreground">
-                {t("footer.services_list.modeling")}
+                {t("footer", "services_list", "modeling")}
               </li>
               <li className="text-sm text-muted-foreground">
-                {t("footer.services_list.arVr")}
+                {t("footer", "services_list", "arVr")}
               </li>
             </ul>
           </div>
