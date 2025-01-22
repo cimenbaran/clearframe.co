@@ -65,6 +65,14 @@ export const translations = {
       title: "Our Portfolio",
       subtitle: "Explore our collection of virtual tours and architectural visualizations.",
       beforeAfter: "Before & After Comparisons",
+      transformations: {
+        livingRoom: {
+          title: "Living Room Transformation",
+        },
+        kitchen: {
+          title: "Kitchen Renovation",
+        },
+      },
       labels: {
         before: "Before",
         after: "After",
@@ -194,6 +202,14 @@ export const translations = {
       title: "Portfolyomuz",
       subtitle: "Sanal turlarımız ve mimari görselleştirmelerimizi inceleyin.",
       beforeAfter: "Öncesi ve Sonrası Karşılaştırmaları",
+      transformations: {
+        livingRoom: {
+          title: "Oturma Odası Dönüşümü",
+        },
+        kitchen: {
+          title: "Mutfak Yenileme",
+        },
+      },
       labels: {
         before: "Öncesi",
         after: "Sonrası",

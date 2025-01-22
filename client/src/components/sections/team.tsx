@@ -6,12 +6,12 @@ import { useLanguage } from "@/lib/i18n/languageContext";
 const team = [
   {
     name: "Sarah Johnson",
-    role: "architect",
+    roleKey: "architect",
     image: "https://images.unsplash.com/photo-1644291833042-1361b57de761",
   },
   {
     name: "Michael Chen",
-    role: "visualization",
+    roleKey: "visualization",
     image: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31",
   },
 ];
@@ -53,7 +53,9 @@ export function Team() {
                     className="w-full h-64 object-cover rounded-lg mb-4"
                   />
                   <h3 className="text-xl font-medium mb-1">{member.name}</h3>
-                  <p className="text-muted-foreground">{t("team", `roles.${member.role}`)}</p>
+                  <p className="text-muted-foreground">
+                    {t("team", `roles.${member.roleKey}`)}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>

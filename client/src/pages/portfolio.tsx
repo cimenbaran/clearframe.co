@@ -22,7 +22,7 @@ const portfolio = [
 const comparisons = [
   {
     id: 1,
-    title: "Living Room Transformation",
+    titleKey: "livingRoom",
     beforeImage: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d",
     afterImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
     beforeLabel: "emptySpace",
@@ -30,7 +30,7 @@ const comparisons = [
   },
   {
     id: 2,
-    title: "Kitchen Renovation",
+    titleKey: "kitchen",
     beforeImage: "https://images.unsplash.com/photo-1556911220-bff31c812dba",
     afterImage: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d",
     beforeLabel: "beforeRenovation",
@@ -103,7 +103,7 @@ export default function Portfolio() {
               className="space-y-4"
             >
               <h3 className="text-2xl font-medium text-center mb-6">
-                {comparison.title}
+                {t("portfolio", `transformations.${comparison.titleKey}.title`)}
               </h3>
               <ComparisonSlider
                 beforeImage={comparison.beforeImage}
