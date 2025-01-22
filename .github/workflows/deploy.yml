@@ -41,16 +41,34 @@ jobs:
 
     - name: Prepare deployment
       run: |
+        # Debug: Show initial structure
+        echo "Initial directory structure:"
+        ls -la dist/
+        ls -la dist/public/
+
         # Ensure dist directory exists
         mkdir -p dist
+
+        # Debug: Show content before move
+        echo "Content before move:"
+        ls -la dist/public/
+
         # Move contents from dist/public to dist root
-        mv dist/public/* dist/ || true
+        cp -rv dist/public/* dist/
         rm -rf dist/public
+
         # Create CNAME file
         echo "clearframe.co" > dist/CNAME
+
+        # Debug: Show final structure
+        echo "Final directory structure:"
+        ls -la dist/
+
         # Verify index.html exists
         if [ ! -f dist/index.html ]; then
           echo "Error: index.html not found in dist directory"
+          echo "Current files in dist:"
+          ls -la dist/
           exit 1
         fi
 
