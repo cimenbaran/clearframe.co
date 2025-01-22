@@ -30,13 +30,17 @@ jobs:
       env:
         NEXT_PUBLIC_BASE_URL: https://clearframe.co
 
-    - name: Prepare deployment
-      run: |
-        cp -r dist/public/* dist/
-        rm -rf dist/public
-        echo "clearframe.co" > dist/CNAME
-
     - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: dist
+        clean: true
+
+    - name: Create CNAME file
+      run: echo "clearframe.co" > dist/CNAME
+
+    - name: Deploy custom domain
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
