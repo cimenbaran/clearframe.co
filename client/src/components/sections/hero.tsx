@@ -11,9 +11,11 @@ export function Hero() {
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d")',
           backgroundAttachment: 'fixed',
-          opacity: '0.15'
         }}
       />
+
+      {/* Dark overlay for better text readability */}
+      <div className="fixed inset-0 w-full h-full bg-black/50 -z-10" />
 
       {/* Content overlay */}
       <div className="relative min-h-[80vh] flex items-center">
