@@ -30,6 +30,16 @@ export const translations = {
         commercial: "Commercial",
         residential: "Residential",
       },
+      projects: {
+        modernOffice: {
+          title: "Modern Office Complex",
+          description: "A virtual tour of a contemporary office building in downtown.",
+        },
+        luxuryResidence: {
+          title: "Luxury Residence",
+          description: "Interactive tour of a high-end residential property.",
+        },
+      },
     },
     team: {
       title: "Our Team",
@@ -148,6 +158,16 @@ export const translations = {
       category: {
         commercial: "Ticari",
         residential: "Konut",
+      },
+      projects: {
+        modernOffice: {
+          title: "Modern Ofis Kompleksi",
+          description: "Şehir merkezinde çağdaş bir ofis binasının sanal turu.",
+        },
+        luxuryResidence: {
+          title: "Lüks Konut",
+          description: "Yüksek sınıf bir konutun interaktif turu.",
+        },
       },
     },
     team: {

@@ -7,17 +7,15 @@ import { useLanguage } from "@/lib/i18n/languageContext";
 const portfolio = [
   {
     id: 1,
-    title: "Modern Office Complex",
-    description: "A virtual tour of a contemporary office building in downtown.",
+    titleKey: "modernOffice",
     image: "https://images.unsplash.com/photo-1534527489986-3e3394ca569c",
-    category: "Commercial",
+    category: "commercial",
   },
   {
     id: 2,
-    title: "Luxury Residence",
-    description: "Interactive tour of a high-end residential property.",
+    titleKey: "luxuryResidence",
     image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
-    category: "Residential",
+    category: "residential",
   },
 ];
 
@@ -70,14 +68,18 @@ export default function Portfolio() {
             <div className="overflow-hidden rounded-lg mb-4">
               <img
                 src={item.image}
-                alt={item.title}
+                alt={t("gallery", `projects.${item.titleKey}.title`)}
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
-            <h3 className="text-xl font-medium mb-2">{item.title}</h3>
-            <p className="text-muted-foreground">{item.description}</p>
+            <h3 className="text-xl font-medium mb-2">
+              {t("gallery", `projects.${item.titleKey}.title`)}
+            </h3>
+            <p className="text-muted-foreground">
+              {t("gallery", `projects.${item.titleKey}.description`)}
+            </p>
             <span className="inline-block mt-2 text-sm bg-muted px-3 py-1 rounded-full">
-              {item.category}
+              {t("gallery", `category.${item.category}`)}
             </span>
           </motion.div>
         ))}
