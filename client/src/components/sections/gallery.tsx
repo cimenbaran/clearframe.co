@@ -3,31 +3,32 @@ import { motion, useInView } from "framer-motion";
 import { Lightbox } from "@/components/ui/lightbox";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { useLanguage } from "@/lib/i18n/languageContext";
 
 const projects = [
   {
     id: 1,
     title: "Modern Office Complex",
     image: "https://images.unsplash.com/photo-1534527489986-3e3394ca569c",
-    category: "Architecture",
+    category: "commercial",
   },
   {
     id: 2,
     title: "Luxury Penthouse",
     image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
-    category: "Real Estate",
+    category: "residential",
   },
   {
     id: 3,
     title: "Glass Tower",
     image: "https://images.unsplash.com/photo-1518436127045-3367819540bf",
-    category: "Architecture",
+    category: "commercial",
   },
   {
     id: 4,
     title: "Modern Villa",
     image: "https://images.unsplash.com/photo-1507149833265-60c372daea22",
-    category: "Real Estate",
+    category: "residential",
   },
 ];
 
@@ -35,6 +36,7 @@ export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const { t } = useLanguage();
 
   return (
     <section className="py-16" ref={ref}>
@@ -46,9 +48,9 @@ export function Gallery() {
           transition={{ duration: 0.5 }}
         >
           <div className="inline-block bg-white/90 backdrop-blur-sm p-4 rounded-lg">
-            <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("gallery", "title")}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our portfolio of virtual tours and architectural visualizations.
+              {t("gallery", "subtitle")}
             </p>
           </div>
         </motion.div>
@@ -72,7 +74,7 @@ export function Gallery() {
                 </CardContent>
                 <CardHeader>
                   <h3 className="font-medium">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground">{project.category}</p>
+                  <p className="text-sm text-muted-foreground">{t("gallery", `category.${project.category}`)}</p>
                 </CardHeader>
               </Card>
             </motion.div>
