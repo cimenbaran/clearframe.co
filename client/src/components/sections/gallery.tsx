@@ -38,8 +38,16 @@ export function Gallery() {
     <section className="py-16">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 
+            className="text-3xl font-bold mb-4"
+            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+          >
+            Featured Projects
+          </h2>
+          <p 
+            className="text-muted-foreground max-w-2xl mx-auto"
+            style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}
+          >
             Explore our portfolio of virtual tours and architectural visualizations.
           </p>
         </div>

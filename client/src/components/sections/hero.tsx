@@ -23,10 +23,16 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+            <h1 
+              className="text-4xl font-bold tracking-tight sm:text-6xl mb-6"
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+            >
               Experience Spaces Like Never Before
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p 
+              className="text-xl text-muted-foreground mb-8"
+              style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}
+            >
               We create immersive virtual tours that bring architectural spaces to life.
               Perfect for real estate showcases and architectural presentations.
             </p>
