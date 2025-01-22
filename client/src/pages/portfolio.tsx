@@ -24,7 +24,7 @@ export default function Portfolio() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="container py-16">
+    <div className="container mx-auto px-6 max-w-7xl py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

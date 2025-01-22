@@ -40,14 +40,14 @@ export default function Contact() {
   };
 
   return (
-    <div className="container py-16">
+    <div className="container mx-auto px-6 max-w-7xl py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-2xl mx-auto"
       >
-        <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
-        <p className="text-muted-foreground mb-8">
+        <h1 className="text-4xl font-bold mb-6 text-center">Contact Us</h1>
+        <p className="text-muted-foreground mb-8 text-center">
           Get in touch with us to discuss your virtual tour needs.
         </p>
 
@@ -105,7 +105,7 @@ export default function Contact() {
           </Button>
         </form>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-8">
+        <div className="mt-12 grid md:grid-cols-2 gap-8 text-center">
           <div>
             <h3 className="font-medium mb-2">Email</h3>
             <p className="text-muted-foreground">info@virtualspace.com</p>
