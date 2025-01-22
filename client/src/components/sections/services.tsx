@@ -1,39 +1,42 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Camera, Building2, Box, Building } from "lucide-react";
 import { motion } from "framer-motion";
-
-const services = [
-  {
-    title: "Virtual Tours",
-    description: "Immersive 360° virtual tours with interactive hotspots and guided navigation.",
-    icon: Camera,
-  },
-  {
-    title: "3D Modeling",
-    description: "Detailed 3D models of buildings and spaces with photorealistic rendering.",
-    icon: Box,
-  },
-  {
-    title: "Real Estate Showcase",
-    description: "Engaging virtual property tours for real estate marketing and sales.",
-    icon: Building,
-  },
-  {
-    title: "Architecture Visualization",
-    description: "Professional visualization services for architectural projects and presentations.",
-    icon: Building2,
-  },
-];
+import { useLanguage } from "@/lib/i18n/languageContext";
 
 export function Services() {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      title: t("services", "virtualTours"),
+      description: t("services", "virtualToursDesc"),
+      icon: Camera,
+    },
+    {
+      title: t("services", "modeling"),
+      description: t("services", "modelingDesc"),
+      icon: Box,
+    },
+    {
+      title: t("services", "realEstate"),
+      description: t("services", "realEstateDesc"),
+      icon: Building,
+    },
+    {
+      title: t("services", "architecture"),
+      description: t("services", "architectureDesc"),
+      icon: Building2,
+    },
+  ];
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-12">
           <div className="inline-block bg-white/90 backdrop-blur-sm p-4 rounded-lg">
-            <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("services", "title")}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We offer comprehensive virtual tour solutions for real estate and architecture professionals.
+              {t("services", "subtitle")}
             </p>
           </div>
         </div>

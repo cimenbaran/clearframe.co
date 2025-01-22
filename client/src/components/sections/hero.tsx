@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useLanguage } from "@/lib/i18n/languageContext";
 
 export function Hero() {
+  const { t } = useLanguage();
+
   return (
     <>
-      {/* Fixed background image */}
       <div 
         className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat -z-10"
         style={{
@@ -14,7 +16,6 @@ export function Hero() {
         }}
       />
 
-      {/* Content overlay */}
       <div className="relative min-h-[80vh] flex items-center">
         <div className="container mx-auto px-6 max-w-7xl">
           <motion.div
@@ -25,20 +26,19 @@ export function Hero() {
           >
             <div className="inline-block bg-white/90 backdrop-blur-sm p-4 rounded-lg mb-4">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                Experience Spaces Like Never Before
+                {t("hero", "title")}
               </h1>
               <p className="text-xl text-muted-foreground mt-4">
-                We create immersive virtual tours that bring architectural spaces to life.
-                Perfect for real estate showcases and architectural presentations.
+                {t("hero", "subtitle")}
               </p>
             </div>
             <div className="flex gap-4">
               <Link href="/portfolio">
-                <Button size="lg">View Portfolio</Button>
+                <Button size="lg">{t("nav", "portfolio")}</Button>
               </Link>
               <Link href="/about">
                 <Button size="lg" variant="outline">
-                  Learn More
+                  {t("nav", "about")}
                 </Button>
               </Link>
             </div>

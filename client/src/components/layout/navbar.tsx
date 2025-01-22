@@ -3,14 +3,17 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Logo } from "@/components/ui/logo";
+import { LanguageSelector } from "@/components/ui/language-selector";
+import { useLanguage } from "@/lib/i18n/languageContext";
 
 export function Navbar() {
   const [location] = useLocation();
+  const { t } = useLanguage();
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/portfolio", label: "Portfolio" },
-    { href: "/about", label: "About" },
+    { href: "/", label: t("nav", "home") },
+    { href: "/portfolio", label: t("nav", "portfolio") },
+    { href: "/about", label: t("nav", "about") },
   ];
 
   return (
@@ -44,17 +47,11 @@ export function Navbar() {
           <div className="ml-auto flex items-center space-x-4">
             <Link href="/contact">
               <a className="text-sm font-medium text-muted-foreground hover:text-primary">
-                Contact
+                {t("nav", "contact")}
               </a>
             </Link>
-            <Button>Get Started</Button>
-            <select 
-              className="bg-transparent border rounded px-2 py-1 text-sm"
-              defaultValue="en"
-            >
-              <option value="en">EN</option>
-              <option value="tr">TR</option>
-            </select>
+            <Button>{t("nav", "getStarted")}</Button>
+            <LanguageSelector />
           </div>
         </nav>
       </div>
