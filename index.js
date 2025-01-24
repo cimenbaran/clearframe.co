@@ -156,7 +156,7 @@ app.use((req, res, next) => {
   } else {
     serveStatic(app);
   }
-  const PORT = 5e3;
+  const PORT = 5001;
   server.listen(PORT, "0.0.0.0", () => {
     log(`serving on port ${PORT}`);
   });
