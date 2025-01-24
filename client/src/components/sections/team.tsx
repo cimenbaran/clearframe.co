@@ -2,19 +2,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useLanguage } from "@/lib/i18n/languageContext";
+import emirPhoto from "../../assets/emiraltintas.jpeg"
+import baranPhoto from "../../assets/barancimen.jpeg"
 
 const team = [
   {
     name: "Baran Çimen",
     roleKey: "cofounderbaran",
-    image:
-      "https://media.licdn.com/dms/image/v2/C4D03AQFXcYUeliSkQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1661172993941?e=1743033600&v=beta&t=pXZzGPvj9Vrk0owzQc9SgzLM1QK2z1WMxngJCpU-OtM",
-  },
+    image: baranPhoto,
+   },
   {
     name: "Emir Altıntaş",
     roleKey: "cofounderemir",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQGIb56TPkxfKQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694676276769?e=1743033600&v=beta&t=dRfbJmF-48OrWKUmqUT2p_D-qnjqppiycX79qPk1ki4",
+    image: emirPhoto,
   },
 ];
 
