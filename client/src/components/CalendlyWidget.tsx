@@ -1,15 +1,26 @@
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    Calendly?: {
+      initBadgeWidget: (options: {
+        url: string;
+        text: string;
+        color: string;
+        textColor: string;
+      }) => void;
+    };
+  }
+}
+
 const CalendlyWidget = () => {
   useEffect(() => {
-    // Load Calendly script dynamically
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
     document.body.appendChild(script);
 
     script.onload = () => {
-      // Initialize the Calendly badge widget
       if (window.Calendly) {
         window.Calendly.initBadgeWidget({
           url: "https://calendly.com/clearframe-info/initial-meeting",
@@ -25,7 +36,7 @@ const CalendlyWidget = () => {
     };
   }, []);
 
-  return null; // This component does not render anything visible
+  return null;
 };
 
 export default CalendlyWidget;

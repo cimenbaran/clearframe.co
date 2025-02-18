@@ -10,6 +10,7 @@ import Portfolio from "@/pages/portfolio";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
+import CalendlyWidget from "@/components/CalendlyWidget";
 
 function Router() {
   return (
