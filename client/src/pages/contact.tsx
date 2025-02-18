@@ -110,7 +110,7 @@ export default function Contact() {
         <div className="mt-12 grid md:grid-cols-2 gap-8 text-center">
           <div>
             <h3 className="font-medium mb-2">Email</h3>
-            <p className="text-muted-foreground">info@clearframe.com</p>
+            <p className="text-muted-foreground">info@clearframe.co</p>
           </div>
           <div>
             <h3 className="font-medium mb-2">Phone</h3>
