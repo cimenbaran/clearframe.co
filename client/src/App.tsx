@@ -10,7 +10,7 @@ import Portfolio from "@/pages/portfolio";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
-import CalendlyWidget from "@/components/CalendlyWidget";
+import { PopupWidget } from "react-calendly";
 
 function Router() {
   return (
@@ -35,6 +35,17 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <Router />
+        <PopupWidget
+          url="https://calendly.com/clearframe-info/initial-meeting"
+          /*
+          * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+          * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+          */
+          rootElement={document.getElementById("root")}
+          text="Schedule a meeting!"
+          textColor="#ffffff"
+          color="#00a2ff"
+        />
         <Toaster />
       </LanguageProvider>
     </QueryClientProvider>
