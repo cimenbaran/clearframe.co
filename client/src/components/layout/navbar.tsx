@@ -52,7 +52,11 @@ export function Navbar() {
                 {t("nav", "contact")}
               </a>
             </Link>
-            <Button>{t("nav", "getStarted")}</Button>
+            <Link href="https://calendly.com/clearframe-info/initial-meeting">
+              <Button>{t("nav", "getStarted")}
+                
+              </Button>
+            </Link>
             <LanguageSelector />
           </div>
         </nav>

@@ -21,13 +21,13 @@ export const translations = {
         "Immersive 360° virtual tours with interactive hotspots and guided navigation.",
       modeling: "3D Modeling",
       modelingDesc:
-        "Detailed 3D models of buildings and spaces with photorealistic rendering.",
-      realEstate: "Real Estate Showcase",
+        "Turn your concepts into reality with high-quality 3D modeling services.",
+      realEstate: "CGI",
       realEstateDesc:
-        "Engaging virtual property tours for real estate marketing and sales.",
-      architecture: "Architecture Visualization",
+        "Redefine your brand with cutting-edge CGI technology—break boundaries!",
+      architecture: "AR/VR",
       architectureDesc:
-        "Professional visualization services for architectural projects and presentations.",
+        "Empower your brand with immersive AR/VR experiences that redefine interaction.",
     },
     gallery: {
       title: "Featured Projects",
@@ -170,13 +170,13 @@ export const translations = {
         "Etkileşimli erişim noktaları ve rehberli navigasyon ile sürükleyici 360° sanal turlar.",
       modeling: "3B Modelleme",
       modelingDesc:
-        "Fotorealistik görselleştirme ile detaylı bina ve mekan 3B modelleri.",
-      realEstate: "Emlak Gösterimi",
+        "Konseptlerinizi yüksek kaliteli 3D modelleme hizmetleriyle gerçeğe dönüştürün.",
+      realEstate: "CGI",
       realEstateDesc:
-        "Emlak pazarlama ve satışları için etkileyici sanal mülk turları.",
-      architecture: "Mimari Görselleştirme",
+        "Öncü CGI teknolojisiyle markanızı yeniden tanımlayın, sınırları aşın",
+      architecture: "AR/VR",
       architectureDesc:
-        "Mimari projeler ve sunumlar için profesyonel görselleştirme hizmetleri.",
+        "Büyüleyici ve ilham verici yenilikçi AR/VR teknolojileriyle geleceğe adım atın",
     },
     gallery: {
       title: "Öne Çıkan Projeler",
