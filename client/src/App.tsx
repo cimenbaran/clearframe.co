@@ -34,6 +34,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <Router />
+        <CalendlyWidget />
         <Toaster />
       </LanguageProvider>
     </QueryClientProvider>
