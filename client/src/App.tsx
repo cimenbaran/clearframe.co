@@ -11,6 +11,7 @@ import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import { PopupWidget } from "react-calendly";
+import Demo from "./pages/demo";
 
 function Router() {
   return (

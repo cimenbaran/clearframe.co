@@ -92,6 +92,17 @@ export const translations = {
         emptySpace: "Empty Space",
         furnished: "Furnished",
       },
+      videos: {
+        videoOne: {
+          title: "Video 1",
+        },
+        videoTwo: {
+          title: "Video 2",
+        },
+        videoThree: {
+          title: "Video 3",
+        },
+      }
     },
     about: {
       title: "About ClearFrame",
@@ -238,6 +249,17 @@ export const translations = {
         emptySpace: "Boş Alan",
         furnished: "Döşenmiş",
       },
+      videos: {
+        videoOne: {
+          title: "Video 1",
+        },
+        videoTwo: {
+          title: "Video 2",
+        },
+        videoThree: {
+          title: "Video 3",
+        },
+      }
     },
     about: {
       title: "ClearFrame Hakkında",
