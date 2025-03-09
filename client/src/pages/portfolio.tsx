@@ -1,6 +1,6 @@
 ﻿import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n/languageContext";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const videos = [
   {
@@ -23,6 +23,32 @@ const videos = [
 export default function Portfolio() {
   const { t } = useLanguage();
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // CSS'siz scroll bar gizleme
+  useEffect(() => {
+    if (scrollRef.current) {
+      // JavaScript kullanarak scroll barı gizleme
+      const scrollElement = scrollRef.current;
+      
+      // Inline style kullanarak scroll barı gizle
+      scrollElement.style.msOverflowStyle = "none";  // IE ve Edge için
+      scrollElement.style.scrollbarWidth = "none";   // Firefox için
+      
+      // Webkit tarayıcıları için
+      const styleSheet = document.createElement("style");
+      styleSheet.textContent = `
+        #customScrollContainer::-webkit-scrollbar {
+          display: none !important;
+        }
+      `;
+      document.head.appendChild(styleSheet);
+      
+      // Cleanup
+      return () => {
+        document.head.removeChild(styleSheet);
+      };
+    }
+  }, []);
 
   const scroll = (direction: string) => {
     if (scrollRef.current) {
@@ -47,8 +73,9 @@ export default function Portfolio() {
 
       <div className="relative">
         <div
+          id="customScrollContainer"
           ref={scrollRef}
-          className="flex space-x-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-8"
+          className="flex space-x-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8"
         >
           {videos.map((video) => (
             <div key={video.id} className="snap-center shrink-0 w-full flex justify-center">
@@ -85,17 +112,6 @@ export default function Portfolio() {
           </button>
         </div>
       </div>
-
-      {/* Extra CSS to permanently hide scrollbar */}
-      <style jsx global>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none !important;
-        }
-        .scrollbar-hide {
-          -ms-overflow-style: none !important;
-          scrollbar-width: none !important;
-        }
-      `}</style>
     </div>
   );
 }
