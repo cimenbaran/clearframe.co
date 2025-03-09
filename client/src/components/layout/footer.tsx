@@ -103,7 +103,7 @@ export function Footer() {
             <h4 className="font-medium mb-4">{t("footer", "contact")}</h4>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">info@clearframe.co</li>
-              <li className="text-sm text-muted-foreground">+1 (555) 123-4567</li>
+              <li className="text-sm text-muted-foreground">+90 (534) 973-8287</li>
             </ul>
           </div>
         </div>

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github",
+    "\\client",
+    "\\client\\src",
+    "\\client\\src\\components",
+    "\\client\\src\\components\\sections",
+    "\\client\\src\\hooks",
+    "\\client\\src\\lib",
+    "\\client\\src\\pages"
+  ],
+  "SelectedNode": "\\client\\src\\components\\sections\\services.tsx",
+  "PreviewInSolutionExplorer": false
+}
