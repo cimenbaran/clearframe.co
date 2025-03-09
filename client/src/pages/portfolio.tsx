@@ -30,15 +30,18 @@ export default function Portfolio() {
       // JavaScript kullanarak scroll barı gizleme
       const scrollElement = scrollRef.current;
       
-      // Inline style kullanarak scroll barı gizle
-      scrollElement.style.msOverflowStyle = "none";  // IE ve Edge için
-      scrollElement.style.scrollbarWidth = "none";   // Firefox için
+      // TypeScript'in tanıdığı özellikleri kullanalım
+      // Firefox için scrollbarWidth'i kullanma
+      (scrollElement as any).style.scrollbarWidth = "none";
       
       // Webkit tarayıcıları için
       const styleSheet = document.createElement("style");
       styleSheet.textContent = `
         #customScrollContainer::-webkit-scrollbar {
           display: none !important;
+        }
+        #customScrollContainer {
+          -ms-overflow-style: none;
         }
       `;
       document.head.appendChild(styleSheet);
